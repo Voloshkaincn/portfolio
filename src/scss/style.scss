@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600;700;900&display=swap");
+@import "variables";
+@import "components/normalize";
+@import "../libs/splide/css/splide-core.min.css";
+@import "components/common";
+
+.header {
+    position: sticky;
+    top: 0;
+    background: $bg;
+    z-index: 9;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+.logo {
+    display: block;
+    padding-bottom: 8px;
+    &__icon {
+        color: $cta-color;
+        font-size: 2.125em;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: -0.1em;
+        margin-right: 5px;
+        vertical-align: bottom;
+    }
+    &__text {
+        font-size: 1.75em;
+        line-height: 1;
+        vertical-align: bottom;
+        font-weight: 700;
+        // letter-spacing: -0.03em;
+    }
+}
+.navbutton {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $cta-color;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: all 0.3s;
+    &:focus,
+    &:hover {
+        @include focus;
+    }
+    &__line {
+        display: block;
+        flex-shrink: 0;
+        width: 100%;
+        height: 10%;
+        background: $ctatext-color;
+        border-radius: 3px;
+        margin: 2% 0;
+        transform-origin: center;
+        transition: all 0.5s;
+    }
+    &__active {
+        .navbutton__line {
+            width: 116%;
+            &:nth-child(1) {
+                transform: rotate(35deg) translate(6px, 8px);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(145deg) translate(-6px, 8px);
+            }
+        }
+    }
+}
+.footer {
+    border-top: 2px solid #82b0bf;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 0 3px #ffffff, 0 0 0 7px #82b0bf;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+    }
+    &__logo {
+        margin-top: 0.3em;
+    }
+}
+.copiryte {
+    font-size: 0.8em;
+    line-height: 2.3;
+    margin-top: auto;
+    margin-bottom: 0;
+    margin-left: 13px;
+}
+.banner {
+    margin: 0;
+    margin-top: 10px;
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+    &__content {
+        width: 33.5em;
+        padding: 60px 10px 65px 65px;
+        border-top: 8px solid $main-color;
+        border-left: 8px solid $main-color;
+        position: relative;
+        margin-right: -16em;
+        flex-shrink: 0;
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0px;
+            bottom: 0px;
+            height: 8px;
+            width: 100%;
+            background-color: #82b0bf;
+            z-index: -1;
+        }
+    }
+    &__title {
+        margin: 0 0 0.3em -0.17em;
+    }
+    &__text {
+        font-size: 1.8em;
+        font-weight: 400;
+    }
+    &__image {
+        width: 100%;
+        height: calc(100vh - 110px);
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+}
+.profile {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 30px;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__action {
+        margin: 30px 0;
+        display: block;
+    }
+    &__box {
+        padding-left: 100px;
+        margin-left: -60px;
+        margin-top: auto;
+        margin-bottom: 5%;
+    }
+    &__img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+}
+.services {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+        padding: 60px 0;
+    }
+}
+.innerbox {
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        .innerbox__icon:before {
+            transform: rotateY(180deg);
+            background-color: #fc4c59;
+        }
+    }
+    &__icon {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        &:before {
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            content: "";
+            width: 52px;
+            height: 52px;
+            z-index: -1;
+            border-radius: 50px;
+            display: inline-block;
+            background-color: $cta-bg;
+            transition: all 600ms ease;
+        }
+    }
+    &__svg {
+        width: 100%;
+        height: 100%;
+        fill: $text-color;
+    }
+    &__title {
+        font-size: 1.25em;
+        font-weight: 600;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+}
+.projects {
+    margin: 50px 0;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 20px;
+    @media (max-width: $xl) {
+        gap: 30px;
+    }
+    &__image {
+        display: block;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    &__category {
+        color: $cta-color;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__title {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s;
+        &:hover {
+            color: $cta-color;
+        }
+    }
+}
+.cta {
+    &__contacts {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10%;
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+}
+.contacts {
+    &__item {
+        font-weight: 600;
+        transition: all 0.3s;
+        &:hover {
+            color: $cta-color;
+        }
+    }
+    &__svg {
+        fill: $cta-color;
+        width: 1em;
+        height: 1em;
+        vertical-align: text-top;
+        margin-right: 0.3em;
+    }
+}
+.reviews {
+    width: 100%;
+    padding: 80px 15%;
+    position: relative;
+    &__list {
+        width: 100%;
+    }
+    .splide__pagination {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        height: 100%;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__page {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: block;
+            background: #dddddd;
+            padding: 0;
+            margin: 7px 0px;
+            transition: all 300ms ease;
+            &:hover,
+            &.is-active,
+            &:focus {
+                outline: none;
+                background: $cta-color;
+            }
+        }
+    }
+}
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__image {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        &:before {
+            content: ",,";
+            margin-right: 30px;
+            color: $cta-color;
+            font-size: 80px;
+            font-weight: 700;
+            transform: rotate(180deg);
+        }
+        &:after {
+            content: ",,";
+            margin-left: 30px;
+            color: $cta-color;
+            font-size: 80px;
+            font-weight: 700;
+        }
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__name {
+        color: $main-color;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    &__company {
+        margin: 0;
+    }
+}

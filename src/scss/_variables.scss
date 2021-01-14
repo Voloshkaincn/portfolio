@@ -1,0 +1,20 @@
+/*==== breakpoints====*/
+$xxl: 1600px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 0;
+
+$bg: #fff;
+$main-color: #82b0bf;
+$cta-color: #fc4c59;
+$cta-bg: #e6f4f8;
+$text-color: #222222;
+$ctatext-color: #fff;
+
+@mixin focus {
+    outline: none;
+    opacity: 0.8;
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}

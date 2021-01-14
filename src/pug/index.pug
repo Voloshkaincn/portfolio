@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+html(lang="zxx")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Tanya Naumenko
+		link(rel="stylesheet", href="src/css/style.css")
+	body
+		include modules/header.pug
+		section.banner
+			div.container.banner__container
+				div.banner__content
+					h1.h1.banner__title Welcome To
+						br
+						span.color Naumenko
+					div.banner__text Web Developer
+				div.banner__image
+					img.banner__img(src="src/images/banner2.jpg", alt="Tatiana Naumenko")
+
+		section.section.profile
+			div.container.profile__container
+				h2.title
+					span.strong Hey, I`m 
+						span.main-color Tanya
+						| .
+					br
+					span My Journey Starts.
+				p.text I’ve been freelancing for over four years now. I create turn-key ready business card websites, landing pages, and small online stores. I also have an outsource based collaboration with Garin Studio. 
+				div.profile__image.boximage
+					img.profile__img(src="src/images/photo1.jpg", alt="Tatiana Naumenko")
+				div.profile__block
+					p.text  I love creating perfect interfaces and solving logical tasks. I felt an urge to share the knowledge as I acquired sufficient experience.
+					p.text I enjoy multisport, so in my free time, I run, cycle, do some rock climbing, and canoeing. My mottoes are ‘nothing is impossible’ and ‘life is a movement.’ So never stop on the way to your future in IT, you can do it.
+					a.action.profile__action(href="#") // Learn more
+					div.colorbox.profile__box
+						ul
+							li
+								a.colorbox__link(href="#") 
+									span.arrow
+										svg.arrow__svg
+											use(xlink:href="#arrow")
+									| My portfolio
+							li
+								a.colorbox__link(href="#") 
+									span.arrow
+										svg.arrow__svg
+											use(xlink:href="#arrow")
+									| Download my CV
+
+		section.section
+			div.container
+				h2.title.title_right.strong What I Do
+					span.color .
+				div.services__list
+					div.innerbox
+						div.innerbox__icon
+							svg.innerbox__svg
+								use(xlink:href="#outline")
+						p.innerbox__title Development
+						p.text Vim novum tritaniys scribentur varet peru dicat copiosae reprimique teimy laborey fabulas scriptorem.
+
+					div.innerbox
+						div.innerbox__icon
+							svg.innerbox__svg
+								use(xlink:href="#wordpress")
+						p.innerbox__title Wordpress development
+						p.text Vim novum tritaniys scribentur varet peru dicat copiosae reprimique teimy laborey fabulas scriptorem.
+
+					div.innerbox
+						div.innerbox__icon
+							svg.innerbox__svg
+								use(xlink:href="#mentor")
+						p.innerbox__title Frontend Mentor
+						p.text Vim novum tritaniys scribentur varet peru dicat copiosae reprimique teimy laborey fabulas scriptorem.
+
+		section.section
+			div.container
+				h2.title.strong My portfolio
+					span.color .
+				div.projects
+					div.projects__item
+						div.projects__content
+							a(href="#").projects__image
+								img.projects__img(src="https://cdn.bolvo.com/mashura/images/gallery/1.jpg", alt="project1")
+							div.projects__name \\ THE MOCKUP
+							a(href="#").projects__title iPhone XS With Shadow
+					div.projects__item
+						div.projects__content
+							a(href="#").projects__image
+								img.projects__img(src="https://cdn.bolvo.com/mashura/images/gallery/2.jpg", alt="project2")
+							div.projects__name \\ PHOTOGRAPHY
+							a(href="#").projects__title Business Cards
+					div.projects__item
+						div.projects__content
+							a(href="#").projects__image
+								img.projects__img(src="https://cdn.bolvo.com/mashura/images/gallery/4.jpg", alt="project4")
+							div.projects__name \\ PHOTOGRAPHY
+							a(href="#").projects__title Interior Design
+					div.projects__item
+						div.projects__content
+							a(href="#").projects__image
+								img.projects__img(src="https://cdn.bolvo.com/mashura/images/gallery/4.jpg", alt="project4")
+							div.projects__name \\ PHOTOGRAPHY
+							a(href="#").projects__title Interior Design
+					div.projects__item
+						div.projects__content
+							a(href="#").projects__image
+								img.projects__img(src="https://cdn.bolvo.com/mashura/images/gallery/2.jpg", alt="project2")
+							div.projects__name \\ PHOTOGRAPHY
+							a(href="#").projects__title Business Cards
+					div.projects__item
+						div.projects__content
+							a(href="#").projects__image
+								img.projects__img(src="https://cdn.bolvo.com/mashura/images/gallery/1.jpg", alt="project1")
+							div.projects__name \\ THE MOCKUP
+							a(href="#").projects__title iPhone XS With Shadow
+
+		section.section.cta
+			div.container
+				h2.cta__title Are You Inspired By My Work? Call Me Today
+				div.contacts.cta__contacts
+					a.contacts__item(href="tel:+380931282717")
+						svg.contacts__svg
+							use(xlink:href="#phone")
+						| +38 (093) 128 27 17
+					a.contacts__item(href="mailto:barvinok.cn@gmail.com")
+						svg.contacts__svg
+							use(xlink:href="#email")
+						| barvinok.cn@gmail.com
+
+
+		section.section
+			div.container
+				h2.title.title.strong What Clients Saying
+					span.color .
+				div.reviews.splide
+					div.reviews__track.splide__track
+						ul.reviews__list.splide__list
+							li.review.splide__slide
+								div.review__image
+									img.review__img(src="src/images/review1.jpg" alt="review")
+								p.text Aperiam eaque ipsa quae ab illo inventore veritatis Sit voluptatem accusantium dolore laudan totam architecto beatae vitae dicta sun explica tempor incid labore et dolore magna aliqua veniam exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit sed in voluptate.
+								p.review__name Elena Dmitrieva
+								p.review__company Garin Studio
+							li.review.splide__slide
+								div.review__image
+									img.review__img(src="src/images/review1.jpg" alt="review")
+								p.text Aperiam eaque ipsa quae ab illo inventore veritatis Sit voluptatem accusantium dolore laudan totam architecto beatae vitae dicta sun explica tempor incid labore et dolore magna aliqua veniam exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit sed in voluptate.
+								p.review__name 2 Elena Dmitrieva
+								p.review__company Garin Studio
+							li.review.splide__slide
+								div.review__image
+									img.review__img(src="src/images/review1.jpg" alt="review")
+								p.text Aperiam eaque ipsa quae ab illo inventore veritatis Sit voluptatem accusantium dolore laudan totam architecto beatae vitae dicta sun explica tempor incid labore et dolore magna aliqua veniam exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit sed in voluptate.
+								p.review__name 3 Elena Dmitrieva
+								p.review__company Garin Studio
+				div.reviews__dot
+
+		include modules/footer.pug
+
+		script(src="src/js/scripts.min.js")
+
+		include modules/svg-index.pug
